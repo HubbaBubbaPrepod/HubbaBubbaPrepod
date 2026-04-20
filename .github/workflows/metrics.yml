@@ -3,115 +3,97 @@ name: 📊 Generate Full Metrics
 
 on:
   schedule:
-    - cron: "0 3 * * *"   # Каждый день в 03:00 UTC
-  workflow_dispatch:       # Можно запустить вручную
+    - cron: "0 3 * * *"
+  workflow_dispatch:
 
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
     permissions:
-      contents: write      # Обязательно для записи SVG-файла в репозиторий
+      contents: write
 
     steps:
       - uses: lowlighter/metrics@latest
         with:
-          # === АВТОРИЗАЦИЯ ===
           token: ${{ secrets.GH_TOKEN }}
           user: HubbaBubbaPrepod
 
-          # === ШАБЛОН ===
           template: classic
-          
-          # === БАЗОВЫЕ СЕКЦИИ (header, активность и т.д.) ===
           base: header, activity, community, repositories, metadata
 
-          # === ПЛАГИНЫ (только GitHub) ===
-
-          # ----- Активность и календари -----
-          plugin_isocalendar: yes               # Изометрический календарь
+          # ----- Плагины GitHub -----
+          plugin_isocalendar: yes
           plugin_isocalendar_days: 7
 
-          plugin_languages: yes                 # Языки программирования
+          plugin_languages: yes
           plugin_languages_details: bytes-size, percentage
           plugin_languages_limit: 8
           plugin_languages_threshold: 2%
           plugin_languages_sections: most-used
           plugin_languages_indepth: yes
           plugin_languages_ignored: html, css, tex, less, dockerfile, makefile, qmake, lex, cmake, shell, gnuplot, vue, scala, ejs
-          plugin_languages_skipped: HubbaBubbaPrepod/HubbaBubbaPrepod   # не учитывать сам профильный репо
+          plugin_languages_skipped: HubbaBubbaPrepod/HubbaBubbaPrepod
 
-          plugin_lines: yes                     # Строки кода (добавлено/удалено)
-          plugin_lines_sections: base,repositories
+          plugin_lines: yes
+          plugin_lines_sections: base, repositories
 
-          plugin_habits: no                     # <- Временно отключен из-за отсутствия активности
-          # plugin_habits_from: 200
-          # plugin_habits_facts: yes
-          # plugin_habits_charts: yes
-          # plugin_habits_charts_type: classic
-          # plugin_habits_trim: yes
-          # plugin_habits_visibility: public
+          # habits и activity временно отключены (появятся после первой активности)
+          plugin_habits: no
+          plugin_activity: no
 
-          plugin_followup: yes                  # Статистика по issues/PR
+          plugin_followup: yes
           plugin_followup_sections: user, repositories
           plugin_followup_indepth: yes
           plugin_followup_archived: yes
 
-          plugin_notable: yes                   # Выдающиеся контрибуции
+          plugin_notable: yes
           plugin_notable_from: all
           plugin_notable_repositories: yes
           plugin_notable_self: yes
           plugin_notable_types: commit, pull_request, issue
 
-          plugin_activity: no                   # <- Временно отключен из-за отсутствия активности
-          # plugin_activity_limit: 5
-          # plugin_activity_days: 14
-          # plugin_activity_filter: all
-          # plugin_activity_visibility: public
-          # plugin_activity_timestamps: yes
-          # plugin_activity_load: 300
-
-          plugin_stars: yes                     # Недавно отмеченные звёздами репозитории
+          plugin_stars: yes
           plugin_stars_limit: 4
 
-          plugin_stargazers: yes                # Динамика звёзд
+          plugin_stargazers: yes
           plugin_stargazers_charts: yes
           plugin_stargazers_charts_type: classic
           plugin_stargazers_days: 14
 
-          plugin_traffic: yes                   # Трафик репозиториев
+          plugin_traffic: yes
           plugin_traffic_skipped: HubbaBubbaPrepod/HubbaBubbaPrepod
           plugin_traffic_limit: 5
 
-          plugin_topics: yes                    # Облако топиков из звёздных репо
+          plugin_topics: yes
           plugin_topics_mode: icons
           plugin_topics_limit: 0
           plugin_topics_sort: stars
           plugin_topics_max: 15
 
-          plugin_people: yes                    # Подписчики и подписки
+          plugin_people: yes
           plugin_people_types: followers, following
           plugin_people_limit: 28
           plugin_people_size: 28
           plugin_people_thanks: yes
 
-          plugin_reactions: yes                 # Реакции на ваши комментарии
+          plugin_reactions: yes
           plugin_reactions_limit: 200
           plugin_reactions_days: 30
           plugin_reactions_details: count, percentage
 
-          plugin_discussions: yes               # Статистика по обсуждениям
+          plugin_discussions: yes
           plugin_discussions_categories: yes
           plugin_discussions_limit: 4
 
-          plugin_gists: yes                     # Последние Gists
+          plugin_gists: yes
           plugin_gists_limit: 4
           plugin_gists_ignored: .gitignore
 
-          plugin_skyline: yes                   # 3D-небоскрёб активности
-          plugin_skyline_year: 2025             # <- Изменено на 2025
+          plugin_skyline: yes
+          plugin_skyline_year: 2025
           plugin_skyline_frames: 60
           plugin_skyline_quality: 1
-          plugin_skyline_settings: |            # <- Исправлен JSON
+          plugin_skyline_settings: |
             {
               "url": "https://skyline.github.com/${login}/${year}",
               "ready": "[...document.querySelectorAll('span')].map(span => span.innerText).includes('Share on Twitter')",
@@ -123,18 +105,19 @@ jobs:
               "showLicenses": false
             }
 
-          plugin_steam: yes                     # Игровая активность в Steam
-          plugin_steam_token: ${{ secrets.STEAM_TOKEN }}
-          plugin_steam_user: 76561199044190142  # Ваш Steam ID
+          # ----- Steam (исправлено) -----
+          plugin_steam: yes
+          plugin_steam_api_key: ${{ secrets.STEAM_TOKEN }}
+          plugin_steam_user: 76561199044190142
           plugin_steam_sections: player, most-played, recently-played
+          plugin_steam_limit: 3
 
-
-          # === НАСТРОЙКИ ОТОБРАЖЕНИЯ ===
+          # ----- Порядок отображения -----
           config_order: base.header, isocalendar, languages, lines, followup, notable, stars, stargazers, traffic, topics, people, reactions, discussions, gists, skyline, steam
 
-          # === ДОПОЛНИТЕЛЬНЫЕ ОПЦИИ ===
+          # ----- Дополнительно -----
           commits_authoring: HubbaBubbaPrepod, HubbaBubbaPrepod@users.noreply.github.com
-          config_timezone: Europe/Moscow        # Укажи свой часовой пояс
+          config_timezone: Europe/Moscow
           optimize: svg
           experimental_features: yes
           use_prebuilt_image: yes
