@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="200" viewBox="0 0 800 200">
+  <foreignObject width="800" height="200">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="
+      font-family: 'Fira Code', monospace;
+      background: linear-gradient(135deg, #1e1e2f 0%, #2a2a40 100%);
+      color: white;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      box-shadow: 0 0 30px rgba(0,255,0,0.3);">
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@700&amp;display=swap');
+        .gradient-text {
+          background: linear-gradient(45deg, #00ff00, #00ffff);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          font-size: 48px;
+          margin: 0;
+          animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+          0% { opacity: 0.8; }
+          50% { opacity: 1; text-shadow: 0 0 20px #00ff00; }
+          100% { opacity: 0.8; }
+        }
+        .ascii-art {
+          color: #00ff00;
+          font-family: monospace;
+          white-space: pre;
+        }
+      </style>
+      <h1 class="gradient-text">HubbaBubbaPrepod</h1>
+      <div class="ascii-art">
+        ╔══════════════════════════╗
+        ║  &gt; ./fullstack --init   ║
+        ║  Loading skills... [OK]  ║
+        ╚══════════════════════════╝
+      </div>
+    </div>
+  </foreignObject>
+</svg>
