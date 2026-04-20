@@ -1,21 +1,150 @@
 # .github/workflows/metrics.yml
-name: Generate Metrics
+name: 📊 Generate Full Metrics
+
 on:
   schedule:
-    - cron: "0 3 * * *" # Каждый день в 03:00 UTC
-  workflow_dispatch:
+    - cron: "0 3 * * *"   # Каждый день в 03:00 UTC
+  workflow_dispatch:       # Можно запустить вручную
+
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: write      # Обязательно для записи SVG-файла в репозиторий
+
     steps:
       - uses: lowlighter/metrics@latest
         with:
-          token: ${{ secrets.GH_TOKEN }} # Твой токен
+          # === АВТОРИЗАЦИЯ ===
+          token: ${{ secrets.GH_TOKEN }}
           user: HubbaBubbaPrepod
+
+          # === ШАБЛОН ===
           template: classic
-          base: header, activity, community
-          plugin_habits: yes
-          plugin_habits_facts: yes # Покажет интересные факты о твоих привычках
-          plugin_habits_charts: yes # Покажет графики
+          
+          # === БАЗОВЫЕ СЕКЦИИ (header, активность и т.д.) ===
+          base: header, activity, community, repositories, metadata
+
+          # === ПЛАГИНЫ (только GitHub) ===
+
+          # ----- Активность и календари -----
+          plugin_isocalendar: yes               # Изометрический календарь
+          plugin_isocalendar_days: 7
+
+          plugin_languages: yes                 # Языки программирования
+          plugin_languages_details: bytes-size, percentage
+          plugin_languages_limit: 8
+          plugin_languages_threshold: 2%
+          plugin_languages_sections: most-used
+          plugin_languages_indepth: yes
+          plugin_languages_ignored: html, css, tex, less, dockerfile, makefile, qmake, lex, cmake, shell, gnuplot, vue, scala, ejs
+          plugin_languages_skipped: HubbaBubbaPrepod/HubbaBubbaPrepod   # не учитывать сам профильный репо
+
+          plugin_lines: yes                     # Строки кода (добавлено/удалено)
+          plugin_lines_sections: base
+
+          plugin_habits: yes                    # Привычки кодинга
+          plugin_habits_from: 200              # Сколько последних коммитов анализировать
+          plugin_habits_facts: yes
+          plugin_habits_charts: yes
+          plugin_habits_charts_type: classic
+          plugin_habits_trim: yes
+
+          plugin_followup: yes                  # Статистика по issues/PR
+          plugin_followup_sections: user, repositories
+          plugin_followup_indepth: yes
+          plugin_followup_archived: yes
+
+          plugin_notable: yes                   # Выдающиеся контрибуции
+          plugin_notable_from: all
+          plugin_notable_repositories: yes
+          plugin_notable_self: yes
+          plugin_notable_types: commit, pull_request, issue
+
+          plugin_achievements: yes              # Достижения GitHub
+          plugin_achievements_display: compact
+          plugin_achievements_threshold: X       # X = показывать все, даже низкоуровневые
+          plugin_achievements_secrets: yes
+          plugin_achievements_limit: 0
+
+          plugin_activity: yes                  # Лента активности
+          plugin_activity_limit: 5
+          plugin_activity_days: 14
+          plugin_activity_filter: all
+          plugin_activity_visibility: public
+          plugin_activity_timestamps: yes
+          plugin_activity_load: 300
+
+          plugin_stars: yes                     # Недавно отмеченные звёздами репозитории
+          plugin_stars_limit: 4
+
+          plugin_stargazers: yes                # Динамика звёзд
+          plugin_stargazers_charts: yes
+          plugin_stargazers_charts_type: classic
+          plugin_stargazers_days: 14
+
+          plugin_traffic: yes                   # Трафик репозиториев
+          plugin_traffic_skipped: HubbaBubbaPrepod/HubbaBubbaPrepod
+          plugin_traffic_limit: 5
+
+          plugin_topics: yes                    # Облако топиков из звёздных репо
+          plugin_topics_mode: icons
+          plugin_topics_limit: 0
+          plugin_topics_sort: stars
+          plugin_topics_max: 15
+
+          plugin_people: yes                    # Подписчики и подписки
+          plugin_people_types: followers, following
+          plugin_people_limit: 28
+          plugin_people_size: 28
+          plugin_people_thanks: yes
+
+          plugin_reactions: yes                 # Реакции на ваши комментарии
+          plugin_reactions_limit: 200
+          plugin_reactions_days: 30
+          plugin_reactions_details: count, percentage
+
+          plugin_discussions: yes               # Статистика по обсуждениям
+          plugin_discussions_categories: yes
+          plugin_discussions_limit: 4
+
+          plugin_gists: yes                     # Последние Gists
+          plugin_gists_limit: 4
+          plugin_gists_ignored: .gitignore
+
+          plugin_contributors: yes              # Основные контрибьюторы (по выбранному репо)
+          plugin_contributors_head: master
+          plugin_contributors_ignored: HubbaBubbaPrepod
+          plugin_contributors_contributions: yes
+          plugin_contributors_limit: 10
+
+          plugin_skyline: yes                   # 3D-небоскрёб активности
+          plugin_skyline_year: current
+          plugin_skyline_frames: 60
+          plugin_skyline_quality: 1
+          plugin_skyline_settings: |
+            {
+              "showSkyline": true,
+              "showGround": true,
+              "showGrid": true,
+              "showLicenses": false
+            }
+
+          plugin_steam: yes                   # Игровая активность в Steam
+          plugin_steam_token: ${{ secrets.STEAM_TOKEN }}
+          plugin_steam_user: your_steam_id
+          plugin_steam_sections: player, most-played, recently-played
+
+
+          # === НАСТРОЙКИ ОТОБРАЖЕНИЯ ===
+          config_order: base.header, isocalendar, languages, lines, habits, followup, notable, achievements, activity, stars, stargazers, traffic, topics, people, reactions, discussions, gists, contributors, skyline, pagespeed, screenshot, wakatime, music, spotify, steam, leetcode, anilist, 16personalities, fortune, stock, support, introduction
+
+          # === ДОПОЛНИТЕЛЬНЫЕ ОПЦИИ ===
+          commits_authoring: HubbaBubbaPrepod, HubbaBubbaPrepod@users.noreply.github.com
+          config_timezone: Europe/Moscow        # Укажи свой часовой пояс
+          optimize: svg
+          experimental_features: yes
+          use_prebuilt_image: yes
+          retries: 3
+          retries_delay: 30
+          retries_output_only: yes
