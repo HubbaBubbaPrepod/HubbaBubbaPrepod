@@ -18,3 +18,6 @@
 ---
 ![](./github-metrics.svg)
 
+---
+[//]: # (dree - BEGIN)
+[//]: # (dree - END)
