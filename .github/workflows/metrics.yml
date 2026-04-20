@@ -43,13 +43,13 @@ jobs:
           plugin_lines: yes                     # Строки кода (добавлено/удалено)
           plugin_lines_sections: base,repositories
 
-          plugin_habits: yes                    # Привычки кодинга
-          plugin_habits_from: 200              # Сколько последних коммитов анализировать
-          plugin_habits_facts: yes
-          plugin_habits_charts: yes
-          plugin_habits_charts_type: classic
-          plugin_habits_trim: yes
-          plugin_habits_visibility: public
+          plugin_habits: no                     # <- Временно отключен из-за отсутствия активности
+          # plugin_habits_from: 200
+          # plugin_habits_facts: yes
+          # plugin_habits_charts: yes
+          # plugin_habits_charts_type: classic
+          # plugin_habits_trim: yes
+          # plugin_habits_visibility: public
 
           plugin_followup: yes                  # Статистика по issues/PR
           plugin_followup_sections: user, repositories
@@ -62,13 +62,13 @@ jobs:
           plugin_notable_self: yes
           plugin_notable_types: commit, pull_request, issue
 
-          plugin_activity: yes                  # Лента активности
-          plugin_activity_limit: 5
-          plugin_activity_days: 14
-          plugin_activity_filter: all
-          plugin_activity_visibility: public
-          plugin_activity_timestamps: yes
-          plugin_activity_load: 300
+          plugin_activity: no                   # <- Временно отключен из-за отсутствия активности
+          # plugin_activity_limit: 5
+          # plugin_activity_days: 14
+          # plugin_activity_filter: all
+          # plugin_activity_visibility: public
+          # plugin_activity_timestamps: yes
+          # plugin_activity_load: 300
 
           plugin_stars: yes                     # Недавно отмеченные звёздами репозитории
           plugin_stars_limit: 4
@@ -108,30 +108,29 @@ jobs:
           plugin_gists_ignored: .gitignore
 
           plugin_skyline: yes                   # 3D-небоскрёб активности
-          plugin_skyline_year: 2026
+          plugin_skyline_year: 2025             # <- Изменено на 2025
           plugin_skyline_frames: 60
           plugin_skyline_quality: 1
-          plugin_skyline_settings: |
-            
+          plugin_skyline_settings: |            # <- Исправлен JSON
             {
               "url": "https://skyline.github.com/${login}/${year}",
               "ready": "[...document.querySelectorAll('span')].map(span => span.innerText).includes('Share on Twitter')",
               "wait": 1,
-              "hide": "button, footer, a"
+              "hide": "button, footer, a",
               "showSkyline": true,
               "showGround": true,
               "showGrid": true,
               "showLicenses": false
             }
 
-          plugin_steam: yes                   # Игровая активность в Steam
+          plugin_steam: yes                     # Игровая активность в Steam
           plugin_steam_token: ${{ secrets.STEAM_TOKEN }}
-          plugin_steam_user: 76561199044190142
+          plugin_steam_user: 76561199044190142  # Ваш Steam ID
           plugin_steam_sections: player, most-played, recently-played
 
 
           # === НАСТРОЙКИ ОТОБРАЖЕНИЯ ===
-          config_order: base.header, isocalendar, languages, lines, habits, followup, notable, achievements, activity, stars, stargazers, traffic, topics, people, reactions, discussions, gists, contributors, skyline, pagespeed, screenshot, wakatime, music, spotify, steam, leetcode, anilist, 16personalities, fortune, stock, support, introduction
+          config_order: base.header, isocalendar, languages, lines, followup, notable, stars, stargazers, traffic, topics, people, reactions, discussions, gists, skyline, steam
 
           # === ДОПОЛНИТЕЛЬНЫЕ ОПЦИИ ===
           commits_authoring: HubbaBubbaPrepod, HubbaBubbaPrepod@users.noreply.github.com
