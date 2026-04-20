@@ -6,12 +6,18 @@ on:
     - cron: "0 1 * * *" # Запускать каждый день в 01:00 UTC
   workflow_dispatch: # Позволяет запускать вручную
 
+# Добавляем разрешения для GITHUB_TOKEN (на всякий случай) и используем GH_TOKEN для push
+permissions:
+  contents: write   # Разрешаем запись в содержимое репозитория
+
 jobs:
   build:
     runs-on: ubuntu-latest
     name: generate-github-profile-3d-contrib
     steps:
       - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GH_TOKEN }}   # <-- Важно: используем ваш персональный токен для checkout
       - uses: yoshi389111/github-profile-3d-contrib@0.7.1
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }} # Используем созданный ранее секрет
@@ -20,8 +26,6 @@ jobs:
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git config --global credential.helper store
-          echo "https://x-access-token:${GH_TOKEN}@github.com" > ~/.git-credentials
           git add -A .
           git commit -m "generated 3d contribution graph" || exit 0
           git push
