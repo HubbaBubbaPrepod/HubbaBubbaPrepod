@@ -1,0 +1,21 @@
+# .github/workflows/metrics.yml
+name: Generate Metrics
+on:
+  schedule:
+    - cron: "0 3 * * *" # Каждый день в 03:00 UTC
+  workflow_dispatch:
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.GH_TOKEN }} # Твой токен
+          user: HubbaBubbaPrepod
+          template: classic
+          base: header, activity, community
+          plugin_habits: yes
+          plugin_habits_facts: yes # Покажет интересные факты о твоих привычках
+          plugin_habits_charts: yes # Покажет графики
