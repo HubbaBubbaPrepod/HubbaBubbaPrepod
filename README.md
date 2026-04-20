@@ -17,3 +17,6 @@
 
 ---
 ![](./github-metrics.svg)
+
+---
+<source media="(prefers-color-scheme: dark)" srcset="https://pixel-profile.vercel.app/api/github-stats?username=HubbaBubbaPrepod&screen_effect=true&dithering=true&include_all_commits=true&pixelate_avatar=true&theme=journey&theme=journey&color=%23ffffffFF&hide=avatar%2Ccommits%2Cissues%2Ccontributions%2Cprs%2Crank%2Cstars">
