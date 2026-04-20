@@ -89,31 +89,8 @@ jobs:
           plugin_gists_limit: 4
           plugin_gists_ignored: .gitignore
 
-          plugin_skyline: yes
-          plugin_skyline_year: 2025
-          plugin_skyline_frames: 60
-          plugin_skyline_quality: 1
-          plugin_skyline_settings: |
-            {
-              "url": "https://skyline.github.com/${login}/${year}",
-              "ready": "[...document.querySelectorAll('span')].map(span => span.innerText).includes('Share on Twitter')",
-              "wait": 1,
-              "hide": "button, footer, a",
-              "showSkyline": true,
-              "showGround": true,
-              "showGrid": true,
-              "showLicenses": false
-            }
-
-          # ----- Steam (исправлено) -----
-          plugin_steam: yes
-          plugin_steam_api_key: ${{ secrets.STEAM_TOKEN }}
-          plugin_steam_user: 76561199044190142
-          plugin_steam_sections: player, most-played, recently-played
-          plugin_steam_limit: 3
-
           # ----- Порядок отображения -----
-          config_order: base.header, isocalendar, languages, lines, followup, notable, stars, stargazers, traffic, topics, people, reactions, discussions, gists, skyline, steam
+          config_order: base.header, isocalendar, languages, lines, followup, notable, stars, stargazers, traffic, topics, people, reactions, discussions, gists
 
           # ----- Дополнительно -----
           commits_authoring: HubbaBubbaPrepod, HubbaBubbaPrepod@users.noreply.github.com
