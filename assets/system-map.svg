@@ -1,0 +1,91 @@
+<svg width="1200" height="540" viewBox="0 0 1200 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="smBg" x1="28" y1="20" x2="1165" y2="522" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#07110D"/><stop offset="0.48" stop-color="#090D12"/><stop offset="1" stop-color="#12090B"/>
+    </linearGradient>
+    <radialGradient id="smCoreGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(600 270) scale(278 240)">
+      <stop stop-color="#39FF88" stop-opacity="0.17"/><stop offset="1" stop-color="#39FF88" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="smGrid" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M30 0H0V30" stroke="#9DFFBE" stroke-opacity="0.035"/></pattern>
+    <filter id="smGlow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <clipPath id="smClip"><rect x="10" y="10" width="1180" height="520" rx="28"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#smClip)">
+    <rect x="10" y="10" width="1180" height="520" rx="28" fill="url(#smBg)"/>
+    <rect x="10" y="10" width="1180" height="520" rx="28" fill="url(#smGrid)"/>
+    <rect x="10" y="10" width="1180" height="520" rx="28" fill="url(#smCoreGlow)"/>
+
+    <g font-family="Consolas, Menlo, monospace">
+      <text x="52" y="48" fill="#39FF88" font-size="10" font-weight="700" letter-spacing="2.2">SYSTEM MAP / LIVE TOPOLOGY</text>
+      <text x="1148" y="48" text-anchor="end" fill="#66716B" font-size="9" letter-spacing="1.6">4 NODES · ALL CHANNELS OPERATIONAL</text>
+    </g>
+
+    <g fill="none" stroke-width="1.4">
+      <path id="webPath" d="M510 224C458 185 432 149 385 142" stroke="#39FF88" stroke-opacity="0.35"/>
+      <path id="mobilePath" d="M690 224C742 185 768 149 815 142" stroke="#39FF88" stroke-opacity="0.35"/>
+      <path id="intelPath" d="M510 316C458 355 432 391 385 398" stroke="#FF304C" stroke-opacity="0.42"/>
+      <path id="infraPath" d="M690 316C742 355 768 391 815 398" stroke="#39FF88" stroke-opacity="0.35"/>
+    </g>
+
+    <g filter="url(#smGlow)">
+      <circle r="4" fill="#39FF88"><animateMotion dur="2.7s" repeatCount="indefinite" path="M385 142C432 149 458 185 510 224"/></circle>
+      <circle r="4" fill="#39FF88"><animateMotion dur="3.1s" repeatCount="indefinite" path="M815 142C768 149 742 185 690 224"/></circle>
+      <circle r="4" fill="#FF304C"><animateMotion dur="2.2s" repeatCount="indefinite" path="M385 398C432 391 458 355 510 316"/></circle>
+      <circle r="4" fill="#39FF88"><animateMotion dur="3.5s" repeatCount="indefinite" path="M815 398C768 391 742 355 690 316"/></circle>
+    </g>
+
+    <g transform="translate(600 270)" font-family="Consolas, Menlo, monospace">
+      <circle r="105" fill="#07110D" stroke="#39FF88" stroke-opacity="0.19"/>
+      <circle r="89" fill="#090D12" stroke="#39FF88" stroke-opacity="0.42"/>
+      <circle r="100" pathLength="1000" stroke="#39FF88" stroke-width="2" stroke-dasharray="88 912" filter="url(#smGlow)">
+        <animate attributeName="stroke-dashoffset" values="0;-1000" dur="5s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="78" pathLength="1000" stroke="#FF304C" stroke-opacity="0.62" stroke-width="1.4" stroke-dasharray="34 966">
+        <animate attributeName="stroke-dashoffset" values="0;1000" dur="3.8s" repeatCount="indefinite"/>
+      </circle>
+      <text y="-12" text-anchor="middle" fill="#39FF88" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="900" letter-spacing="-0.8">ZX CORE</text>
+      <text y="14" text-anchor="middle" fill="#7C8D83" font-size="9" font-weight="700" letter-spacing="2.2">ORCHESTRATION LAYER</text>
+      <rect x="-47" y="34" width="94" height="24" rx="12" fill="#39FF88" fill-opacity="0.08" stroke="#39FF88" stroke-opacity="0.28"/>
+      <circle cx="-30" cy="46" r="3" fill="#39FF88" filter="url(#smGlow)"><animate attributeName="opacity" values="1;.2;1" dur="1.2s" repeatCount="indefinite"/></circle>
+      <text x="8" y="49" text-anchor="middle" fill="#B8FFD0" font-size="8" font-weight="700" letter-spacing="1.4">ONLINE</text>
+    </g>
+
+    <g transform="translate(55 80)" font-family="Consolas, Menlo, monospace">
+      <rect width="330" height="124" rx="15" fill="#08100C" stroke="#245A3B"/>
+      <text x="22" y="32" fill="#39FF88" font-size="10" font-weight="700" letter-spacing="1.8">01 / WEB PLATFORM</text>
+      <text x="22" y="67" fill="#E6EDF3" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="800">Interfaces → APIs</text>
+      <text x="22" y="95" fill="#718079" font-size="11">React · Vite · Next · NestJS</text>
+      <circle cx="302" cy="28" r="5" fill="#39FF88" filter="url(#smGlow)"><animate attributeName="opacity" values="1;.25;1" dur="1.5s" repeatCount="indefinite"/></circle>
+    </g>
+
+    <g transform="translate(815 80)" font-family="Consolas, Menlo, monospace">
+      <rect width="330" height="124" rx="15" fill="#08100C" stroke="#245A3B"/>
+      <text x="22" y="32" fill="#39FF88" font-size="10" font-weight="700" letter-spacing="1.8">02 / MOBILE SYSTEMS</text>
+      <text x="22" y="67" fill="#E6EDF3" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="800">Native → Device</text>
+      <text x="22" y="95" fill="#718079" font-size="11">Kotlin · Compose · Room · Hilt</text>
+      <circle cx="302" cy="28" r="5" fill="#39FF88" filter="url(#smGlow)"><animate attributeName="opacity" values=".25;1;.25" dur="1.8s" repeatCount="indefinite"/></circle>
+    </g>
+
+    <g transform="translate(55 336)" font-family="Consolas, Menlo, monospace">
+      <rect width="330" height="124" rx="15" fill="#120A0C" stroke="#6B2632"/>
+      <text x="22" y="32" fill="#FF5269" font-size="10" font-weight="700" letter-spacing="1.8">03 / INTELLIGENCE</text>
+      <text x="22" y="67" fill="#F3F3F4" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="800">Signals → Decisions</text>
+      <text x="22" y="95" fill="#8E7378" font-size="11">Python · LLM · OSINT · Automation</text>
+      <circle cx="302" cy="28" r="5" fill="#FF304C" filter="url(#smGlow)"><animate attributeName="opacity" values="1;.2;1" dur="1.15s" repeatCount="indefinite"/></circle>
+    </g>
+
+    <g transform="translate(815 336)" font-family="Consolas, Menlo, monospace">
+      <rect width="330" height="124" rx="15" fill="#08100C" stroke="#245A3B"/>
+      <text x="22" y="32" fill="#39FF88" font-size="10" font-weight="700" letter-spacing="1.8">04 / INFRASTRUCTURE</text>
+      <text x="22" y="67" fill="#E6EDF3" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="800">Deploy → Observe</text>
+      <text x="22" y="95" fill="#718079" font-size="11">Docker · Linux · PostgreSQL · Redis</text>
+      <circle cx="302" cy="28" r="5" fill="#39FF88" filter="url(#smGlow)"><animate attributeName="opacity" values=".25;1;.25" dur="2s" repeatCount="indefinite"/></circle>
+    </g>
+
+    <path d="M52 490H1148" stroke="#39FF88" stroke-opacity="0.12"/>
+    <text x="600" y="509" text-anchor="middle" fill="#536159" font-family="Consolas, Menlo, monospace" font-size="9" letter-spacing="2">WEB · MOBILE · INTELLIGENCE · INFRASTRUCTURE / ONE CONNECTED SYSTEM</text>
+  </g>
+
+  <rect x="10.75" y="10.75" width="1178.5" height="518.5" rx="27.25" stroke="#39FF88" stroke-opacity="0.27" stroke-width="1.5"/>
+</svg>

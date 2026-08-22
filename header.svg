@@ -1,56 +1,89 @@
-<svg fill="none" viewBox="0 0 800 200" width="800" height="200" xmlns="http://www.w3.org/2000/svg">
-  <foreignObject width="100%" height="100%">
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <style>
-        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;display=swap');
-        .header-container {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          height: 200px;
-          font-family: 'Press Start 2P', monospace;
-          background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
-          border-radius: 16px;
-          border: 2px solid #30363d;
-        }
-        .gradient-text {
-          font-size: 28px;
-          font-weight: bold;
-          background: linear-gradient(90deg, #00ff00, #00ffff, #ff00ff);
-          -webkit-background-clip: text;
-          background-clip: text;
-          color: transparent;
-          animation: glow 3s ease-in-out infinite alternate;
-        }
-        @keyframes glow {
-          from { text-shadow: 0 0 10px #00ff00; }
-          to { text-shadow: 0 0 30px #ff00ff; }
-        }
-        .subtitle {
-          color: #8b949e;
-          font-size: 14px;
-          margin-top: 20px;
-          letter-spacing: 2px;
-        }
-        .easter-egg {
-          color: #0d1117;
-          background: #0d1117;
-          font-size: 10px;
-          margin-top: 10px;
-          user-select: none;
-        }
-        .easter-egg::selection {
-          color: #00ff00;
-          background: #161b22;
-        }
-      </style>
-      <div class="header-container">
-        <div class="gradient-text">HubbaBubbaPrepod</div>
-        <div class="subtitle">✦ Full-Stack Developer ✦</div>
-        <!-- Пасхалка: текст, видимый только при выделении -->
-        <div class="easter-egg">🎉 You found the hidden message! Welcome to the club! 🎉</div>
-      </div>
-    </div>
-  </foreignObject>
+<svg width="1200" height="380" viewBox="0 0 1200 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="46" y1="20" x2="1137" y2="373" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111923"/>
+      <stop offset="0.48" stop-color="#090D12"/>
+      <stop offset="1" stop-color="#07110D"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="150" y1="0" x2="1010" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#39FF88"/>
+      <stop offset="0.5" stop-color="#9DFFBE"/>
+      <stop offset="1" stop-color="#20C975"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(949 185) rotate(180) scale(361 276)">
+      <stop stop-color="#39FF88" stop-opacity="0.19"/>
+      <stop offset="1" stop-color="#39FF88" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse">
+      <path d="M 34 0 L 0 0 0 34" fill="none" stroke="#8BFFB5" stroke-opacity="0.055" stroke-width="1"/>
+    </pattern>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#000000" flood-opacity="0.48"/>
+    </filter>
+    <filter id="softGlow" x="-40%" y="-100%" width="180%" height="300%">
+      <feGaussianBlur stdDeviation="7" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="frame"><rect x="10" y="10" width="1180" height="360" rx="28"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#frame)">
+    <rect x="10" y="10" width="1180" height="360" rx="28" fill="url(#bg)"/>
+    <rect x="10" y="10" width="1180" height="360" rx="28" fill="url(#grid)"/>
+    <rect x="10" y="10" width="1180" height="360" rx="28" fill="url(#glow)"/>
+    <path d="M-33 324C183 292 235 383 431 342C654 296 757 208 972 245C1085 264 1176 234 1237 191" stroke="#39FF88" stroke-opacity="0.08" stroke-width="78"/>
+
+    <g opacity="0.55">
+      <circle cx="82" cy="78" r="2" fill="#39FF88"><animate attributeName="opacity" values=".25;1;.25" dur="2.8s" repeatCount="indefinite"/></circle>
+      <circle cx="1111" cy="79" r="2" fill="#39FF88"><animate attributeName="opacity" values="1;.2;1" dur="3.4s" repeatCount="indefinite"/></circle>
+      <circle cx="1062" cy="320" r="1.5" fill="#9DFFBE"><animate attributeName="opacity" values=".2;1;.2" dur="2.1s" repeatCount="indefinite"/></circle>
+      <circle cx="534" cy="57" r="1.5" fill="#9DFFBE"/>
+      <circle cx="635" cy="329" r="1.5" fill="#39FF88"/>
+    </g>
+
+    <g transform="translate(70 58)">
+      <rect width="286" height="30" rx="15" fill="#39FF88" fill-opacity="0.08" stroke="#39FF88" stroke-opacity="0.28"/>
+      <circle cx="18" cy="15" r="4" fill="#39FF88" filter="url(#softGlow)">
+        <animate attributeName="opacity" values="1;.35;1" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <text x="32" y="20" fill="#9DFFBE" font-family="Consolas, Menlo, monospace" font-size="11" font-weight="700" letter-spacing="2.1">SYSTEM ONLINE · OPEN TO BUILD</text>
+    </g>
+
+    <g transform="translate(70 120)">
+      <text fill="#7D8590" font-family="Consolas, Menlo, monospace" font-size="18" font-weight="600" letter-spacing="1.5">HELLO, I'M</text>
+      <text y="68" fill="url(#accent)" font-family="Arial, Helvetica, sans-serif" font-size="57" font-weight="900" letter-spacing="-2.7">ZXCHUBBABUBBA</text>
+      <rect y="86" width="532" height="2" rx="1" fill="url(#accent)" fill-opacity="0.75"/>
+      <text y="126" fill="#E6EDF3" font-family="Consolas, Menlo, monospace" font-size="18" font-weight="600">FULL-STACK DEVELOPER</text>
+      <text x="264" y="126" fill="#39FF88" font-family="Consolas, Menlo, monospace" font-size="18">/</text>
+      <text x="290" y="126" fill="#E6EDF3" font-family="Consolas, Menlo, monospace" font-size="18" font-weight="600">AUTOMATION ENGINEER</text>
+      <text y="164" fill="#7D8590" font-family="Consolas, Menlo, monospace" font-size="14" letter-spacing="0.5">WEB  ·  MOBILE  ·  AUTOMATION  ·  INFRASTRUCTURE</text>
+    </g>
+
+    <g transform="translate(790 64)" filter="url(#shadow)">
+      <rect width="338" height="250" rx="17" fill="#0A0F14" stroke="#26342D" stroke-width="1.2"/>
+      <path d="M0 48H338" stroke="#26342D"/>
+      <circle cx="23" cy="24" r="5" fill="#FF5F56"/>
+      <circle cx="43" cy="24" r="5" fill="#FFBD2E"/>
+      <circle cx="63" cy="24" r="5" fill="#27C93F"/>
+      <text x="169" y="29" text-anchor="middle" fill="#55605A" font-family="Consolas, Menlo, monospace" font-size="10" letter-spacing="1.4">~/WORKSPACE</text>
+
+      <g font-family="Consolas, Menlo, monospace" font-size="13">
+        <text x="22" y="81" fill="#39FF88">$</text>
+        <text x="40" y="81" fill="#C9D1D9">cat developer.json</text>
+        <text x="22" y="111" fill="#55605A">{</text>
+        <text x="38" y="136" fill="#9DFFBE">&quot;mindset&quot;</text><text x="117" y="136" fill="#55605A">:</text><text x="130" y="136" fill="#E6EDF3">&quot;ship it&quot;</text><text x="200" y="136" fill="#55605A">,</text>
+        <text x="38" y="161" fill="#9DFFBE">&quot;uptime&quot;</text><text x="109" y="161" fill="#55605A">:</text><text x="122" y="161" fill="#E6EDF3">&quot;24/7&quot;</text><text x="169" y="161" fill="#55605A">,</text>
+        <text x="38" y="186" fill="#9DFFBE">&quot;coffee&quot;</text><text x="109" y="186" fill="#55605A">:</text><text x="122" y="186" fill="#39FF88">true</text>
+        <text x="22" y="211" fill="#55605A">}</text>
+        <text x="22" y="235" fill="#39FF88">$</text>
+        <rect x="40" y="224" width="8" height="14" rx="1" fill="#39FF88">
+          <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+    </g>
+
+    <text x="1126" y="347" text-anchor="end" fill="#39FF88" fill-opacity="0.42" font-family="Consolas, Menlo, monospace" font-size="10" letter-spacing="2">HUBBABUBBAPREPOD / 2026</text>
+  </g>
+
+  <rect x="10.75" y="10.75" width="1178.5" height="358.5" rx="27.25" stroke="#39FF88" stroke-opacity="0.24" stroke-width="1.5"/>
 </svg>

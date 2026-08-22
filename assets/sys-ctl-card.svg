@@ -1,0 +1,91 @@
+<svg width="1200" height="420" viewBox="0 0 1200 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="scBg" x1="28" y1="28" x2="1166" y2="404" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#090909"/>
+      <stop offset="0.58" stop-color="#111113"/>
+      <stop offset="1" stop-color="#17090B"/>
+    </linearGradient>
+    <radialGradient id="scGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(930 202) scale(390 310)">
+      <stop stop-color="#FF304C" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#FF304C" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="scTitle" x1="59" y1="0" x2="531" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="0.73" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#FF304C"/>
+    </linearGradient>
+    <pattern id="scGrid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" stroke="#FFFFFF" stroke-opacity="0.028"/>
+    </pattern>
+    <filter id="scSoft" x="-50%" y="-100%" width="200%" height="300%">
+      <feGaussianBlur stdDeviation="7" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="scClip"><rect x="10" y="10" width="1180" height="400" rx="27"/></clipPath>
+    <clipPath id="consoleClip"><rect x="741" y="74" width="401" height="282" rx="16"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#scClip)">
+    <rect x="10" y="10" width="1180" height="400" rx="27" fill="url(#scBg)"/>
+    <rect x="10" y="10" width="1180" height="400" rx="27" fill="url(#scGrid)"/>
+    <rect x="10" y="10" width="1180" height="400" rx="27" fill="url(#scGlow)"/>
+    <path d="M0 340L336 286L517 331L790 243L1212 295" stroke="#FF304C" stroke-opacity="0.055" stroke-width="72"/>
+
+    <g transform="translate(62 48)" font-family="Consolas, Menlo, monospace">
+      <rect width="128" height="28" rx="14" fill="#FF304C" fill-opacity="0.08" stroke="#FF304C" stroke-opacity="0.42"/>
+      <text x="64" y="18" text-anchor="middle" fill="#FF7185" font-size="10" font-weight="700" letter-spacing="1.8">FEATURED / 02</text>
+      <circle cx="161" cy="14" r="4" fill="#FF304C" filter="url(#scSoft)"><animate attributeName="opacity" values="1;.25;1" dur="1.4s" repeatCount="indefinite"/></circle>
+      <text x="176" y="18" fill="#8D666C" font-size="10" font-weight="700" letter-spacing="1.4">AI ANALYSIS PIPELINE · ONLINE</text>
+
+      <text y="88" fill="url(#scTitle)" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="900" letter-spacing="-2.4">SYS.CTL</text>
+      <text x="224" y="87" fill="#FF304C" font-size="13" font-weight="700" letter-spacing="2">// TELEGRAM ANALYZER</text>
+      <text y="124" fill="#A5A5AA" font-size="14" letter-spacing="0.45">FROM RAW EXPORTS TO STRUCTURED AI SIGNALS.</text>
+
+      <text y="166" fill="#F1F1F2" font-size="16" font-weight="700">Parse. Analyze. Stream. Export.</text>
+      <text y="192" fill="#77777E" font-size="13">HTML report parsing, OpenRouter model selection,</text>
+      <text y="213" fill="#77777E" font-size="13">concurrent inference and realtime WebSocket logs.</text>
+
+      <g transform="translate(0 241)" font-size="10" font-weight="700" letter-spacing="1">
+        <g><rect width="94" height="28" rx="7" fill="#1B1012" stroke="#59232C"/><text x="47" y="18" text-anchor="middle" fill="#FF9AA8">PYTHON</text></g>
+        <g transform="translate(104)"><rect width="98" height="28" rx="7" fill="#1B1012" stroke="#59232C"/><text x="49" y="18" text-anchor="middle" fill="#FF9AA8">FASTAPI</text></g>
+        <g transform="translate(212)"><rect width="122" height="28" rx="7" fill="#1B1012" stroke="#59232C"/><text x="61" y="18" text-anchor="middle" fill="#FF9AA8">WEBSOCKET</text></g>
+        <g transform="translate(344)"><rect width="118" height="28" rx="7" fill="#1B1012" stroke="#59232C"/><text x="59" y="18" text-anchor="middle" fill="#FF9AA8">OPENROUTER</text></g>
+      </g>
+
+      <g transform="translate(0 302)">
+        <path d="M0 0H526" stroke="#FF304C" stroke-opacity="0.26"/>
+        <text y="29" fill="#FF5269" font-size="11" font-weight="700" letter-spacing="1.6">OPEN ANALYZER</text>
+        <path d="M138 24H178M172 18L178 24L172 30" stroke="#FF304C" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <animateTransform attributeName="transform" type="translate" values="0 0;7 0;0 0" dur="1.3s" repeatCount="indefinite"/>
+        </path>
+      </g>
+    </g>
+
+    <g transform="translate(741 74)" font-family="Consolas, Menlo, monospace">
+      <rect width="401" height="282" rx="16" fill="#09090B" stroke="#682732"/>
+      <path d="M0 43H401" stroke="#3A1A20"/>
+      <circle cx="20" cy="21" r="4" fill="#FF304C"/><circle cx="36" cy="21" r="4" fill="#6D2631"/><circle cx="52" cy="21" r="4" fill="#3C171C"/>
+      <text x="200" y="25" text-anchor="middle" fill="#72545A" font-size="9" letter-spacing="1.4">SYS.CTL / LIVE INFERENCE</text>
+      <g clip-path="url(#consoleClip)">
+        <rect x="1" y="43" width="399" height="2" fill="#FF304C" fill-opacity="0.42">
+          <animate attributeName="y" values="43;280;43" dur="4.2s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+      <g font-size="11">
+        <text x="20" y="72" fill="#FF5269">&gt;</text><text x="36" y="72" fill="#F0F0F2">INIT_ANALYSIS --workers 32</text>
+        <text x="20" y="101" fill="#77777F">[PARSE]</text><text x="83" y="101" fill="#D2D2D5">telegram_export_01.html</text>
+        <text x="20" y="128" fill="#77777F">[MODEL]</text><text x="83" y="128" fill="#D2D2D5">openrouter / connected</text>
+        <text x="20" y="155" fill="#FF5269">[SIGNAL]</text><text x="90" y="155" fill="#FFFFFF">pattern detected</text>
+        <rect x="20" y="173" width="361" height="54" rx="7" fill="#FF304C" fill-opacity="0.075" stroke="#FF304C" stroke-opacity="0.25"/>
+        <text x="34" y="193" fill="#9B7278">AI CONFIDENCE</text><text x="350" y="193" text-anchor="end" fill="#FF5269" font-weight="700">0.87</text>
+        <rect x="34" y="207" width="333" height="5" rx="2.5" fill="#2A1519"/>
+        <rect x="34" y="207" width="290" height="5" rx="2.5" fill="#FF304C" filter="url(#scSoft)">
+          <animate attributeName="width" values="0;290;290" keyTimes="0;.75;1" dur="3s" repeatCount="indefinite"/>
+        </rect>
+        <text x="20" y="253" fill="#77777F">[EXPORT]</text><text x="83" y="253" fill="#D2D2D5">analysis.csv</text><text x="350" y="253" fill="#FF5269">DONE</text>
+      </g>
+    </g>
+  </g>
+
+  <rect x="10.75" y="10.75" width="1178.5" height="398.5" rx="26.25" stroke="#FF304C" stroke-opacity="0.46" stroke-width="1.5"/>
+</svg>
