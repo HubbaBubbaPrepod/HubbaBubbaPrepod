@@ -1,0 +1,12 @@
+<svg width="285" height="72" viewBox="0 0 285 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs><linearGradient id="syBg" x1="0" y1="0" x2="285" y2="72"><stop stop-color="#0B1210"/><stop offset="1" stop-color="#13090B"/></linearGradient><filter id="syGlow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+  <path d="M0 1H285V71H0Z" fill="url(#syBg)" stroke="#FF304C" stroke-opacity="0.34"/>
+  <path d="M1 1H284" stroke="#FF304C" stroke-opacity="0.64"/>
+  <g transform="translate(21 20)">
+    <rect x="0" y="3" width="38" height="27" rx="8" fill="#FF304C" fill-opacity="0.12" stroke="#FF5269" stroke-width="1.8"/>
+    <path d="M16 11L26 16.5L16 22V11Z" fill="#FF5269"/>
+  </g>
+  <g font-family="Consolas, Menlo, monospace"><text x="70" y="30" fill="#F3F3F4" font-size="12" font-weight="700" letter-spacing="1.5">YOUTUBE</text><text x="70" y="49" fill="#80676B" font-size="9" letter-spacing="0.7">@BubbleGumFriend</text></g>
+  <circle cx="253" cy="36" r="4" fill="#FF304C" filter="url(#syGlow)"><animate attributeName="opacity" values="1;.25;1" dur="1.6s" repeatCount="indefinite"/></circle>
+  <path d="M238 31L243 36L238 41" stroke="#FF5269" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><animateTransform attributeName="transform" type="translate" values="0 0;4 0;0 0" dur="1.5s" begin=".2s" repeatCount="indefinite"/></path>
+</svg>
