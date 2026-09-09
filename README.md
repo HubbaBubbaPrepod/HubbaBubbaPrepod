@@ -6,6 +6,9 @@
 
 <a href="https://github.com/HubbaBubbaPrepod"><img src="./assets/social-github.svg" width="25%" alt="GitHub — HubbaBubbaPrepod" /></a><a href="https://t.me/BubbleGumFriend"><img src="./assets/social-telegram.svg" width="25%" alt="Telegram — BubbleGumFriend" /></a><a href="https://hubbabubbaprepod.github.io/"><img src="./assets/social-website.svg" width="25%" alt="Personal website" /></a><a href="mailto:heyhubbabubbapr@gmail.com"><img src="./assets/social-email.svg" width="25%" alt="Email — start a conversation" /></a>
 
+[![YouTube](https://img.shields.io/badge/YouTube-ZXCHubbaBubba-FF0033?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@BubbleGumFriend)
+[![Twitch](https://img.shields.io/badge/Twitch-zxchubbabubba-9146FF?style=for-the-badge&logo=twitch&logoColor=white)](https://www.twitch.tv/zxchubbabubba)
+
 </div>
 
 <img src="./assets/divider-signal-green.svg" width="100%" alt="Animated signal divider" />
@@ -13,8 +16,8 @@
 ## `> whoami`
 
 ```yaml
-name: zxchubbubba
-role: Full-stack developer
+name: HubbaBubba
+role: Developer and content creator
 focus: [web platforms, mobile apps, automation, infrastructure]
 currently_building: useful things that survive outside localhost
 location: Russia
@@ -24,6 +27,9 @@ status: open to ambitious projects and collaboration
 I build complete products — from the interface people touch to the services, databases,
 deployment and automation behind it. I like fast software, clean architecture and systems
 that are easy to understand at 3 AM.
+
+I also show the real build process — including failures and fixes — on
+[YouTube](https://www.youtube.com/@BubbleGumFriend) and [Twitch](https://www.twitch.tv/zxchubbabubba).
 
 > A large part of my current work lives in private repositories: web platforms,
 > Android applications, developer tools, automation and self-hosted infrastructure.
