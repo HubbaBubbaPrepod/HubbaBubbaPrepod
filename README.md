@@ -73,6 +73,14 @@ that are easy to understand at 3 AM.
 
 <a href="https://github.com/HubbaBubbaPrepod/SYS.CTL"><img src="./assets/sys-ctl-card.svg" width="100%" alt="SYS.CTL — AI-powered Telegram report analyzer" /></a>
 
+<br />
+
+<a href="https://github.com/HubbaBubbaPrepod/DMBTimer"><img src="./assets/dmbtimer-card.svg" width="100%" alt="DMBTimer — native WinUI 3 service countdown for Windows" /></a>
+
+<br />
+
+<a href="https://github.com/HubbaBubbaPrepod/Server-Minecraft-1.21"><img src="./assets/minecraft-server-card.svg" width="100%" alt="Minecraft Server Installer — Linux automation for Vanilla, Forge, Spigot, Paper, Leaf and Arclight" /></a>
+
 </div>
 
 <img src="./assets/divider-signal-dual.svg" width="100%" alt="Animated dual signal divider" />
