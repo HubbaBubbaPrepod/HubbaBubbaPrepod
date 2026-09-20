@@ -4,7 +4,8 @@
 
 <br />
 
-<a href="https://github.com/HubbaBubbaPrepod"><img src="./assets/social-github.svg" width="25%" alt="GitHub — HubbaBubbaPrepod" /></a><a href="https://t.me/BubbleGumFriend"><img src="./assets/social-telegram.svg" width="25%" alt="Telegram — BubbleGumFriend" /></a><a href="https://hubbabubbaprepod.github.io/"><img src="./assets/social-website.svg" width="25%" alt="Personal website" /></a><a href="mailto:heyhubbabubbapr@gmail.com"><img src="./assets/social-email.svg" width="25%" alt="Email — start a conversation" /></a>
+<a href="https://github.com/HubbaBubbaPrepod"><img src="./assets/social-github.svg" width="33.333%" alt="GitHub — HubbaBubbaPrepod" /></a><a href="https://www.youtube.com/@BubbleGumFriend"><img src="./assets/social-youtube.svg" width="33.333%" alt="YouTube — ZXCHubbaBubba" /></a><a href="https://www.twitch.tv/zxchubbabubba"><img src="./assets/social-twitch.svg" width="33.333%" alt="Twitch — zxchubbabubba" /></a><br />
+<a href="https://t.me/BubbleGumFriend"><img src="./assets/social-telegram.svg" width="33.333%" alt="Telegram — BubbleGumFriend" /></a><a href="https://hubbabubbaprepod.github.io/"><img src="./assets/social-website.svg" width="33.333%" alt="Personal website" /></a><a href="mailto:heyhubbabubbapr@gmail.com"><img src="./assets/social-email.svg" width="33.333%" alt="Email — start a conversation" /></a>
 
 </div>
 
@@ -13,8 +14,8 @@
 ## `> whoami`
 
 ```yaml
-name: zxchubbubba
-role: Full-stack developer
+name: HubbaBubba
+role: Developer and content creator
 focus: [web platforms, mobile apps, automation, infrastructure]
 currently_building: useful things that survive outside localhost
 location: Russia
@@ -24,6 +25,9 @@ status: open to ambitious projects and collaboration
 I build complete products — from the interface people touch to the services, databases,
 deployment and automation behind it. I like fast software, clean architecture and systems
 that are easy to understand at 3 AM.
+
+I also show the real build process — including failures and fixes — on
+[YouTube](https://www.youtube.com/@BubbleGumFriend) and [Twitch](https://www.twitch.tv/zxchubbabubba).
 
 > A large part of my current work lives in private repositories: web platforms,
 > Android applications, developer tools, automation and self-hosted infrastructure.
