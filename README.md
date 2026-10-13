@@ -7,7 +7,7 @@
 <a href="https://github.com/HubbaBubbaPrepod"><img src="./assets/social-github.svg" width="33.333%" alt="GitHub — HubbaBubbaPrepod" /></a><a href="https://www.youtube.com/@BubbleGumFriend"><img src="./assets/social-youtube.svg" width="33.333%" alt="YouTube — ZXCHubbaBubba" /></a><a href="https://www.twitch.tv/zxchubbabubba"><img src="./assets/social-twitch.svg" width="33.333%" alt="Twitch — zxchubbabubba" /></a><br />
 <a href="https://t.me/BubbleGumFriend"><img src="./assets/social-telegram.svg" width="33.333%" alt="Telegram — BubbleGumFriend" /></a><a href="https://hubbabubbaprepod.github.io/"><img src="./assets/social-website.svg" width="33.333%" alt="Personal website" /></a><a href="mailto:heyhubbabubbapr@gmail.com"><img src="./assets/social-email.svg" width="33.333%" alt="Email — start a conversation" /></a>
 <br />
-<a href="https://www.donationalerts.com/r/zxchubbabubba"><img src="./assets/social-donationalerts.svg" width="100%" alt="Support HubbaLab through DonationAlerts" /></a>
+<a href="https://www.donationalerts.com/r/zxchubbabubba"><img src="./assets/social-donationalerts.svg" width="66.666%" alt="Support HubbaLab through DonationAlerts" /></a>
 
 </div>
 
