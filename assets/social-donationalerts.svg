@@ -1,0 +1,48 @@
+<svg width="1200" height="76" viewBox="0 0 1200 76" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="daBg" x1="0" y1="0" x2="1200" y2="76" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1210"/>
+      <stop offset="0.5" stop-color="#11100E"/>
+      <stop offset="1" stop-color="#16090C"/>
+    </linearGradient>
+    <linearGradient id="daLine" x1="18" y1="0" x2="1182" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#39FF88"/>
+      <stop offset="0.55" stop-color="#39FF88" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#FF304C"/>
+    </linearGradient>
+    <filter id="daGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <path id="daRoute" d="M18 1H1182"/>
+  </defs>
+
+  <path d="M0 1H1200V75H0Z" fill="url(#daBg)" stroke="#39FF88" stroke-opacity="0.24"/>
+  <path d="M18 1H1182" stroke="url(#daLine)" stroke-opacity="0.72"/>
+  <circle r="3" fill="#FF304C" filter="url(#daGlow)">
+    <animateMotion dur="4s" repeatCount="indefinite"><mpath href="#daRoute"/></animateMotion>
+  </circle>
+
+  <g transform="translate(28 17)">
+    <rect width="42" height="42" rx="12" fill="#FF304C" fill-opacity="0.1" stroke="#FF304C" stroke-opacity="0.7"/>
+    <path d="M21 31S10 24.2 10 16.7C10 10.5 18.1 8.8 21 14C23.9 8.8 32 10.5 32 16.7C32 24.2 21 31 21 31Z" fill="#FF304C" fill-opacity="0.2" stroke="#FF5B70" stroke-width="1.5"/>
+    <path d="M12.5 21H17L19.5 16L23 26L26 21H30" stroke="#F4FFF7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g font-family="Consolas, Menlo, monospace">
+    <text x="88" y="31" fill="#E9FFF0" font-size="13" font-weight="700" letter-spacing="1.8">SUPPORT THE LAB</text>
+    <text x="88" y="51" fill="#718178" font-size="9.5" letter-spacing="0.9">FUEL EXPERIMENTS · SERVERS · OPEN-SOURCE BUILDS</text>
+
+    <path d="M520 18V58" stroke="#39FF88" stroke-opacity="0.16"/>
+    <circle cx="552" cy="38" r="4" fill="#39FF88" filter="url(#daGlow)">
+      <animate attributeName="opacity" values="1;.2;1" dur="1.6s" repeatCount="indefinite"/>
+    </circle>
+    <text x="570" y="34" fill="#DFFFF0" font-size="12" font-weight="700" letter-spacing="1.5">DONATIONALERTS</text>
+    <text x="570" y="52" fill="#7D8E84" font-size="9" letter-spacing="0.75">donationalerts.com/r/zxchubbabubba</text>
+
+    <text x="1055" y="42" fill="#FF7A8B" font-size="10" font-weight="700" letter-spacing="1.4">SEND SIGNAL</text>
+    <path d="M1150 37H1174M1168 31L1174 37L1168 43" stroke="#FF304C" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <animateTransform attributeName="transform" type="translate" values="0 0;5 0;0 0" dur="1.35s" repeatCount="indefinite"/>
+    </path>
+  </g>
+</svg>

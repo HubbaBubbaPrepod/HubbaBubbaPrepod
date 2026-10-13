@@ -32,7 +32,7 @@
 
     <g transform="translate(62 48)" font-family="Consolas, Menlo, monospace">
       <rect width="128" height="28" rx="14" fill="#42A5FF" fill-opacity="0.1" stroke="#42A5FF" stroke-opacity="0.38"/>
-      <text x="64" y="18" text-anchor="middle" fill="#8CCBFF" font-size="10" font-weight="700" letter-spacing="1.8">FEATURED / 03</text>
+      <text x="64" y="18" text-anchor="middle" fill="#8CCBFF" font-size="10" font-weight="700" letter-spacing="1.8">FEATURED / 04</text>
       <circle cx="161" cy="14" r="4" fill="#42A5FF" filter="url(#dtSoft)"><animate attributeName="opacity" values="1;.25;1" dur="1.6s" repeatCount="indefinite"/></circle>
       <text x="176" y="18" fill="#66849B" font-size="10" font-weight="700" letter-spacing="1.35">ACTIVE DEVELOPMENT · NATIVE WINDOWS</text>
 

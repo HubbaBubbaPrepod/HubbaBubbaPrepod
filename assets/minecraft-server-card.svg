@@ -35,7 +35,7 @@
 
     <g transform="translate(62 48)" font-family="Consolas, Menlo, monospace">
       <rect width="128" height="28" rx="14" fill="#6BE35F" fill-opacity="0.09" stroke="#6BE35F" stroke-opacity="0.38"/>
-      <text x="64" y="18" text-anchor="middle" fill="#A4F49C" font-size="10" font-weight="700" letter-spacing="1.8">FEATURED / 04</text>
+      <text x="64" y="18" text-anchor="middle" fill="#A4F49C" font-size="10" font-weight="700" letter-spacing="1.8">FEATURED / 05</text>
       <circle cx="161" cy="14" r="4" fill="#6BE35F" filter="url(#mcSoft)"><animate attributeName="opacity" values="1;.28;1" dur="1.5s" repeatCount="indefinite"/></circle>
       <text x="176" y="18" fill="#71846D" font-size="10" font-weight="700" letter-spacing="1.35">PUBLIC MIRROR · UPSTREAM REALTM · v22.3</text>
 
